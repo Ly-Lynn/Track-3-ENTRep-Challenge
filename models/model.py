@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from typing import Optional, Dict, Any
-from factory import VisionEncoderFactory, TextEncoderFactory
+from .factory import VisionEncoderFactory, TextEncoderFactory
 import os
 
 class MedicalVLM(nn.Module):
