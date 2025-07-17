@@ -34,12 +34,14 @@ class CLIPTextEncoder(TextEncoder):
     def get_feature_dim(self) -> int:
         return self.text_model.config.hidden_size
     
-    def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
+    def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, return_features: bool = False) -> torch.Tensor:
         text_outputs = self.text_model(input_ids=input_ids, attention_mask=attention_mask)
         embeddings = text_outputs.pooler_output
         embeddings = self.bn(embeddings)
         embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
+        if return_features:
+            return embeddings
         return F.normalize(embeddings, dim=-1)
 
 # Vision Encoder Implementations
@@ -69,12 +71,14 @@ class CLIPVisionEncoder(VisionEncoder):
     def get_feature_dim(self) -> int:
         return self.vision_model.config.hidden_size
     
-    def forward(self, images: torch.Tensor) -> torch.Tensor:
+    def forward(self, images: torch.Tensor, return_features: bool = False) -> torch.Tensor:
         vision_outputs = self.vision_model(pixel_values=images)
         embeddings = vision_outputs.pooler_output
         embeddings = self.bn(embeddings)
         embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
+        if return_features:
+            return embeddings
         return F.normalize(embeddings, dim=-1)
 
     

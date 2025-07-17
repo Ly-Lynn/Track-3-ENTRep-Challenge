@@ -1,5 +1,6 @@
 data:
   path: Dataset/
+  json_path: splits_info.json
   train_split: 0.8
   val_split: 0.1
   test_split: 0.1
@@ -8,9 +9,10 @@ data:
 
 model:
   vision_encoder:
-    type: dino
+    type: dinov2
     feature_dim: 768
-    model_name: facebook/dinov2_vitb14
+    model_name: dinov2_vitb14
+    ckp_path: Pretrained/dinov2_vitb14/best_model.pth
   text_encoder:
     type: clip
     feature_dim: 768
@@ -22,4 +24,5 @@ trainer:
   batch_size: 32
   learning_rate: 0.001
   weight_decay: 0.0001
-  device: cuda
+  output_path: checkpoints/
+  model_name: dinob

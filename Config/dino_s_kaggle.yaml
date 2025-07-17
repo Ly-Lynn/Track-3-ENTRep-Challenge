@@ -1,5 +1,5 @@
 data:
-  path: Dataset/
+  path: /kaggle/input/entrep-dataset/Dataset
   json_path: splits_info.json
   train_split: 0.8
   val_split: 0.1
@@ -9,10 +9,10 @@ data:
 
 model:
   vision_encoder:
-    type: endovit
+    type: dinov2
     feature_dim: 768
-    model_name: egeozsoy/EndoViT
-    ckp_path: Pretrained/ent_vit/best_model.pth
+    model_name: dinov2_vits14
+    ckp_path: /kaggle/input/visionencoderpretrained/Pretrained/dinov2_vits14/best_model.pth
   text_encoder:
     type: clip
     feature_dim: 768
@@ -20,9 +20,9 @@ model:
   temperature: 0.07
 
 trainer:
-  num_epochs: 10
+  num_epochs: 20
   batch_size: 32
   learning_rate: 0.001
   weight_decay: 0.0001
-  output_path: checkpoints/
-  model_name: endovit
+  output_path: /kaggle/working/checkpoints/
+  model_name: dinos

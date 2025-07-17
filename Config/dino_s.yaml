@@ -9,10 +9,10 @@ data:
 
 model:
   vision_encoder:
-    type: endovit
+    type: dinov2
     feature_dim: 768
-    model_name: egeozsoy/EndoViT
-    ckp_path: Pretrained/ent_vit/best_model.pth
+    model_name: dinov2_vits14
+    ckp_path: Pretrained/dinov2_vits14/best_model.pth
   text_encoder:
     type: clip
     feature_dim: 768
@@ -25,4 +25,4 @@ trainer:
   learning_rate: 0.001
   weight_decay: 0.0001
   output_path: checkpoints/
-  model_name: endovit
+  model_name: dinos

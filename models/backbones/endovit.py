@@ -75,7 +75,7 @@ class EndoViTVisionEncoder(VisionEncoder):
             raise FileNotFoundError("EndoViT weights not found")
             
     def load_pretrained(self, model_path: str):
-        """Load pretrained model from path"""
+        print(f"🔍 Loading pretrained model from {model_path}")
         self.backbone.load_state_dict(torch.load(model_path))
 
     def get_feature_dim(self) -> int:

@@ -87,17 +87,24 @@ def main():
     model = create_medical_vlm(**model_config)
 
     # Create trainer
-    trainer = MedicalVLMTrainer(model, train_loader, val_loader, trainer_config)
-
+    trainer = MedicalVLMTrainer(model, 
+                                train_loader, 
+                                val_loader, 
+                                trainer_config)
+    
     # Train model
     print("🔍 Training model...")
-    history = trainer.train()
+    history = trainer.train(
+        num_epochs=trainer_config['num_epochs']
+    )
     print("🔍 Training model done")
     print(f"🔍 History: {history}")
 
     # Test model
     print("🔍 Evaluating model...")
-    eval_loss = trainer.evaluate(test_loader)
+    eval_loss = trainer.evaluate(
+        data_loader=test_loader
+    )
     print(f"🔍 Evaluating model done, loss: {eval_loss:.4f}")
 
 if __name__ == "__main__":

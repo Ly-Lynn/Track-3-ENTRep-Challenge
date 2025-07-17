@@ -1,7 +1,8 @@
 import torch
 import torch.nn as nn
 from typing import Optional, Dict, Any
-from .factory import VisionEncoderFactory, TextEncoderFactory
+from factory import VisionEncoderFactory, TextEncoderFactory
+import os
 
 class MedicalVLM(nn.Module):
     """Flexible Medical Vision-Language Model with swappable encoders"""
@@ -151,45 +152,192 @@ if __name__ == "__main__":
         }
         return test_inputs
 
-    # Test different configurations
-    print("Testing MedicalVLM with different configurations...")
+    # # Test different configurations
+    # print("Testing MedicalVLM with different configurations...")
     
-    # Test 1: CLIP vision + CLIP text
-    print("\n1. Testing CLIP vision + CLIP text:")
-    model1 = create_medical_vlm(vision_encoder="clip", text_encoder="clip")
-    model1.eval()
+    # # Test 1: CLIP vision + CLIP text
+    # print("\n1. Testing CLIP vision + CLIP text:")
+    # model1 = create_medical_vlm(vision_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"}, text_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"})
+    # model1.eval()
     
-    # Test 2: EndoViT vision + CLIP text
-    print("\n2. Testing EndoViT vision + CLIP text:")
-    model2 = create_medical_vlm(vision_encoder="endovit", text_encoder="clip")
-    model2.eval()
+    # # Test 2: EndoViT vision + CLIP text
+    # print("\n2. Testing EndoViT vision + CLIP text:")
+    # model2 = create_medical_vlm(vision_encoder={"type": "endovit", "model_name": "egeozsoy/EndoViT"}, text_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"})
+    # model2.eval()
     
-    # Test 3: CLIP vision + BERT text
-    print("\n3. Testing CLIP vision + BERT text:")
-    model3 = create_medical_vlm(vision_encoder="clip", text_encoder="bert")
-    model3.eval()
+    # # Test 3: CLIP vision + BERT text
+    # print("\n3. Testing CLIP vision + BERT text:")
+    # model3 = create_medical_vlm(vision_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"}, text_encoder={"type": "bert", "model_name": "bert-base-uncased"})
+    # model3.eval()
     
-    # Test 4: DINOv2 vision + CLIP text
-    print("\n4. Testing DINOv2 vision + CLIP text:")
-    model4 = create_medical_vlm(vision_encoder="dinov2", text_encoder="clip")
-    model4.eval()
+    # # Test 4: DINOv2 vision + CLIP text
+    # print("\n4. Testing DINOv2 vision + CLIP text:")
+    # model4 = create_medical_vlm(vision_encoder={"type": "dinov2", "model_name": "dinov2_vitb14"}, text_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"})
+    # model4.eval()
 
     test_inputs = create_test_data()
     
-    # Test forward pass for each model
-    for i, model in enumerate([model1, model2, model3, model4], 1):
-        print(f"\nTesting Model {i}:")
-        with torch.no_grad():
+    # # Test forward pass for each model
+    # for i, model in enumerate([model1, model2, model3, model4], 1):
+    #     print(f"\nTesting Model {i}:")
+    #     with torch.no_grad():
+    #         try:
+    #             outputs = model(
+    #                 images=test_inputs["images"],
+    #                 input_ids=test_inputs["input_ids"],
+    #                 attention_mask=test_inputs["attention_mask"]
+    #             )
+    #             print(f"  Image embeds: {outputs['image_embeds'].shape}")
+    #             print(f"  Text embeds: {outputs['text_embeds'].shape}")
+    #             print(f"  Image embeds norm: {outputs['image_embeds'].norm(dim=-1).mean():.4f}")
+    #             print(f"  Text embeds norm: {outputs['text_embeds'].norm(dim=-1).mean():.4f}")
+    #         except Exception as e:
+    #             print(f"  Error: {e}")
+
+    # Test pretrained model loading
+    print("\n" + "="*60)
+    print("TESTING PRETRAINED MODEL LOADING")
+    print("="*60)
+    
+    def test_pretrained_loading():
+        """Test loading pretrained models from Pretrained folder"""
+        import os
+        import glob
+        
+        pretrained_folder = "Pretrained"
+        
+        pretrained_dinob = '/Users/thuylinh.lynguyen/Documents/Code/Track-3-ENTRep-Challenge/Pretrained/dinov2_vitb14/best_model.pth'
+        pretrained_dinos = '/Users/thuylinh.lynguyen/Documents/Code/Track-3-ENTRep-Challenge/Pretrained/dinov2_vits14/best_model.pth'
+        pretrained_dinol = '/Users/thuylinh.lynguyen/Documents/Code/Track-3-ENTRep-Challenge/Pretrained/dinov2_vitl14/best_model-001.pth'
+        pretrained_endovit = '/Users/thuylinh.lynguyen/Documents/Code/Track-3-ENTRep-Challenge/Pretrained/ent_vit/best_model.pth'
+
+        
+        
+        # Test configurations that might match pretrained models
+        test_configs = [
+            {
+                "name": "EndoViT-CLIP", 
+                "vision_encoder": {"type": "endovit", 
+                "model_name": "egeozsoy/EndoViT",
+                "ckp_path": pretrained_endovit},
+                "text_encoder": {"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            },
+            {
+                "name": "DINOv2s-CLIP",
+                "vision_encoder": {"type": "dinov2", 
+                "model_name": "dinov2_vits14",
+                "ckp_path": pretrained_dinos},
+                "text_encoder": {"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            },
+            {
+                "name": "DINOv2b-CLIP",
+                "vision_encoder": {"type": "dinov2", 
+                "model_name": "dinov2_vitb14",
+                "ckp_path": pretrained_dinob},
+                "text_encoder": {"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            },
+            {
+                "name": "DINOv2l-CLIP",
+                "vision_encoder": {"type": "dinov2", 
+                "model_name": "dinov2_vitl14",
+                "ckp_path": pretrained_dinol},
+                "text_encoder": {"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            }
+
+        ]
+        
+        for config in test_configs:
+            print(f"\n📋 Testing {config['name']} configuration:")
+            
             try:
-                outputs = model(
+                # Create model with config
+                model = create_medical_vlm(
+                    vision_encoder=config['vision_encoder'],
+                    text_encoder=config['text_encoder']
+                )
+                print(f"  ✅ Model created successfully")
+                
+                # Try loading each pretrained file
+                for pretrained_file in [config['vision_encoder']['ckp_path']]:
+                    try:
+                        print(f"  📂 Attempting to load: {os.path.basename(pretrained_file)}")
+                        
+                        # Load checkpoint
+                        checkpoint = torch.load(pretrained_file, map_location='cpu')
+                        
+                        # Try to load state dict
+                        if hasattr(model, 'load_checkpoint'):
+                            # Use model's load_checkpoint method if available
+                            model.load_from_path(pretrained_file)
+                            print(f"    ✅ Loaded using load_checkpoint method")
+                        else:
+                            # Try direct state dict loading
+                            model.load_state_dict(checkpoint, strict=False)
+                            print(f"    ✅ Loaded using state_dict (strict=False)")
+                        
+                        # Test forward pass with loaded model
+                        model.eval()
+                        with torch.no_grad():
+                            test_outputs = model(
+                                images=test_inputs["images"],
+                                input_ids=test_inputs["input_ids"], 
+                                attention_mask=test_inputs["attention_mask"]
+                            )
+                            print(f"    🔄 Forward pass successful:")
+                            print(f"       Image embeds: {test_outputs['image_embeds'].shape}")
+                            print(f"       Text embeds: {test_outputs['text_embeds'].shape}")
+                            
+                    except Exception as e:
+                        print(f"    ❌ Failed to load {os.path.basename(pretrained_file)}: {str(e)[:100]}...")
+                        
+            except Exception as e:
+                print(f"  ❌ Failed to create {config['name']} model: {e}")
+    
+    def test_checkpoint_compatibility():
+        """Test checkpoint loading with different model configurations"""
+        print(f"\n🔧 Testing checkpoint compatibility...")
+        
+        try:
+            # Create a simple model and save a checkpoint
+            temp_model = create_medical_vlm(
+                vision_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"},
+                text_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            )
+            
+            # Save temporary checkpoint
+            temp_checkpoint_path = "temp_test_checkpoint.pt"
+            torch.save(temp_model.state_dict(), temp_checkpoint_path)
+            print(f"  💾 Created temporary checkpoint: {temp_checkpoint_path}")
+            
+            # Test loading into same model type
+            new_model = create_medical_vlm(
+                vision_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"},
+                text_encoder={"type": "clip", "model_name": "openai/clip-vit-base-patch32"}
+            )
+            
+            new_model.load_state_dict(torch.load(temp_checkpoint_path, map_location='cpu'))
+            print(f"  ✅ Successfully loaded checkpoint into same model type")
+            
+            # Test forward pass
+            new_model.eval()
+            with torch.no_grad():
+                outputs = new_model(
                     images=test_inputs["images"],
                     input_ids=test_inputs["input_ids"],
                     attention_mask=test_inputs["attention_mask"]
                 )
-                print(f"  Image embeds: {outputs['image_embeds'].shape}")
-                print(f"  Text embeds: {outputs['text_embeds'].shape}")
-                print(f"  Image embeds norm: {outputs['image_embeds'].norm(dim=-1).mean():.4f}")
-                print(f"  Text embeds norm: {outputs['text_embeds'].norm(dim=-1).mean():.4f}")
-            except Exception as e:
-                print(f"  Error: {e}")
+                print(f"  🔄 Forward pass after loading successful")
+            
+            # Clean up
+            os.remove(temp_checkpoint_path)
+            print(f"  🗑️  Cleaned up temporary checkpoint")
+            
+        except Exception as e:
+            print(f"  ❌ Checkpoint compatibility test failed: {e}")
+    
+    # Run pretrained loading tests
+    test_pretrained_loading()
+    test_checkpoint_compatibility()
+    
+    print(f"\n🎉 All tests completed!")
 

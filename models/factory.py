@@ -1,8 +1,8 @@
-from .backbones.base import VisionEncoder, TextEncoder
-from .backbones.dino import DinoV2VisionEncoder
-from .backbones.clip import CLIPVisionEncoder, CLIPTextEncoder
-from .backbones.bert import BERTTextEncoder
-from .backbones.endovit import EndoViTVisionEncoder
+from backbones.base import VisionEncoder, TextEncoder
+from backbones.dino import DinoV2VisionEncoder
+from backbones.clip import CLIPVisionEncoder, CLIPTextEncoder
+from backbones.bert import BERTTextEncoder
+from backbones.endovit import EndoViTVisionEncoder
 
 class VisionEncoderFactory:
     """Factory for creating vision encoders"""

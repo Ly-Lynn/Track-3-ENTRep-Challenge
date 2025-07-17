@@ -96,6 +96,8 @@ class MedicalVLMTrainer:
         self.visualizer = LossVisualizer(self.history)
         
         self.model = self.model.to(self.device)
+        self.model_save_path = os.path.join(self.config['output_path'], self.config['model_name'])
+        os.makedirs(self.model_save_path, exist_ok=True)
 
     def train(self, num_epochs=10):
         for epoch in range(num_epochs):
@@ -158,7 +160,7 @@ class MedicalVLMTrainer:
             
             if avg_val_loss < self.best_val_loss:
                 self.best_val_loss = avg_val_loss
-                self.save_model(os.path.join(self.config['output_path'], self.config['model_name'], 'best.pt'))
+                self.save_model(os.path.join(self.model_save_path, 'best.pt'))
                 self.patience_counter = 0
                 print(f">>> Model best saved (val_loss: {avg_val_loss:.4f})")
             else:
@@ -170,7 +172,7 @@ class MedicalVLMTrainer:
                 
             self.ema.restore()
             
-        self.visualizer.plot(save_path=os.path.join(self.config['output_path'], self.config['model_name'], 'infoNCE.png'))
+        self.visualizer.plot(save_path=os.path.join(self.model_save_path, 'infoNCE.png'))
         return self.history
 
 

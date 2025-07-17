@@ -25,7 +25,7 @@ class DinoV2VisionEncoder(VisionEncoder):
         
         # Initialize feature projection layers (formerly DinoV2Head)
         self.feature_projection = nn.Sequential(
-            nn.Linear(self.backbone._get_feature_dim(), feature_dim),
+            nn.Linear(self.backbone.num_features, feature_dim),
             nn.ReLU(inplace=True),
             nn.Dropout(dropout),
             nn.Linear(feature_dim, feature_dim),
