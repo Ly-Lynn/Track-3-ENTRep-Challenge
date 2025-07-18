@@ -12,7 +12,7 @@ model:
     type: endovit
     feature_dim: 768
     model_name: egeozsoy/EndoViT
-    ckp_path: /kaggle/input/visionencoderpretrained/Pretrained/ent_vit/best_model.pth
+    ckp_path: /kaggle/input/ent-pretrained/Pretrained/ent_vit.pth
   text_encoder:
     type: clip
     feature_dim: 768

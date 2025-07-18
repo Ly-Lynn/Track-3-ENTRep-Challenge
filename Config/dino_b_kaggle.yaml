@@ -12,7 +12,7 @@ model:
     type: dinov2
     feature_dim: 768
     model_name: dinov2_vitb14
-    ckp_path: /kaggle/input/visionencoderpretrained/Pretrained/dinov2_vitb14/best_model.pth
+    ckp_path: /kaggle/input/ent-pretrained/Pretrained/dinov2_vitb14.pth
   text_encoder:
     type: clip
     feature_dim: 768
