@@ -14,8 +14,8 @@ class CLIPTextEncoder(TextEncoder):
         self.clip_model = CLIPModel.from_pretrained(model_name, use_safetensors=True)
         self.text_model = self.clip_model.text_model
         
-        # Batch normalization and dropout
-        self.bn = nn.BatchNorm1d(self.get_feature_dim())
+        # Layer normalization and dropout
+        self.ln = nn.LayerNorm(self.get_feature_dim())
         self.dropout = nn.Dropout(dropout_rate)
         
         # Projection layer
@@ -37,7 +37,7 @@ class CLIPTextEncoder(TextEncoder):
     def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, return_features: bool = False) -> torch.Tensor:
         text_outputs = self.text_model(input_ids=input_ids, attention_mask=attention_mask)
         embeddings = text_outputs.pooler_output
-        embeddings = self.bn(embeddings)
+        embeddings = self.ln(embeddings)
         embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
         if return_features:
@@ -55,8 +55,8 @@ class CLIPVisionEncoder(VisionEncoder):
         self.clip_model = CLIPModel.from_pretrained(model_name, use_safetensors=True)
         self.vision_model = self.clip_model.vision_model
         
-        # Batch normalization and dropout
-        self.bn = nn.BatchNorm1d(self.get_feature_dim())
+        # Layer normalization and dropout
+        self.ln = nn.LayerNorm(self.get_feature_dim())
         self.dropout = nn.Dropout(dropout_rate)
         
         # Projection layer
@@ -74,7 +74,7 @@ class CLIPVisionEncoder(VisionEncoder):
     def forward(self, images: torch.Tensor, return_features: bool = False) -> torch.Tensor:
         vision_outputs = self.vision_model(pixel_values=images)
         embeddings = vision_outputs.pooler_output
-        embeddings = self.bn(embeddings)
+        embeddings = self.ln(embeddings)
         embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
         if return_features:

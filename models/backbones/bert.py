@@ -13,8 +13,8 @@ class BERTTextEncoder(TextEncoder):
         self.feature_dim = feature_dim
         self.bert_model = BertModel.from_pretrained(model_name)
         
-        # Batch normalization and dropout
-        self.bn = nn.BatchNorm1d(self.get_feature_dim())
+        # Layer normalization and dropout
+        self.ln = nn.LayerNorm(self.get_feature_dim())
         self.dropout = nn.Dropout(dropout_rate)
         
         # Projection layer
@@ -29,7 +29,7 @@ class BERTTextEncoder(TextEncoder):
     def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
         outputs = self.bert_model(input_ids=input_ids, attention_mask=attention_mask)
         embeddings = outputs.pooler_output
-        embeddings = self.bn(embeddings)
+        embeddings = self.ln(embeddings)
         embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
         return F.normalize(embeddings, dim=-1)
