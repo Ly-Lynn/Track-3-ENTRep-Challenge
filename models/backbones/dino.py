@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 from .base import VisionEncoder
 from typing import Optional
+
 class DinoV2VisionEncoder(VisionEncoder):
     """Complete DinoV2 model"""
-    
     def __init__(self, 
                  model_name: str = 'dinov2_vitb14',
                  feature_dim: int = 768,
@@ -72,4 +72,13 @@ class DinoV2VisionEncoder(VisionEncoder):
 
     def load_pretrained(self, model_path: str):
         """Load pretrained model from path"""
-        self.backbone.load_state_dict(torch.load(model_path))
+        checkpoint = torch.load(model_path, map_location='cpu')
+            
+        if 'model_state_dict' in checkpoint:
+            state_dict = checkpoint['model_state_dict']
+        else:
+            state_dict = checkpoint
+        
+        # Load state dict
+        self.backbone.load_state_dict(state_dict, strict=False)
+        print("✅ Checkpoint loaded successfully")

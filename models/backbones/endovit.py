@@ -74,10 +74,6 @@ class EndoViTVisionEncoder(VisionEncoder):
         else:
             raise FileNotFoundError("EndoViT weights not found")
             
-    def load_pretrained(self, model_path: str):
-        print(f"🔍 Loading pretrained model from {model_path}")
-        self.backbone.load_state_dict(torch.load(model_path))
-
     def get_feature_dim(self) -> int:
         """Get feature dimension"""
         return self.feature_dim
@@ -117,3 +113,15 @@ class EndoViTVisionEncoder(VisionEncoder):
     def get_backbone_features(self, x):
         """Get raw backbone features"""
         return self._extract_backbone_features(x)
+    
+    def load_pretrained(self, model_path: str):
+        checkpoint = torch.load(model_path, map_location='cpu')
+            
+        if 'model_state_dict' in checkpoint:
+            state_dict = checkpoint['model_state_dict']
+        else:
+            state_dict = checkpoint
+        
+        # Load state dict
+        self.backbone.load_state_dict(state_dict, strict=False)
+        print("✅ Checkpoint loaded successfully")
