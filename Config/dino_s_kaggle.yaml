@@ -24,5 +24,5 @@ trainer:
   batch_size: 32
   learning_rate: 0.001
   weight_decay: 0.0001
-  output_path: /kaggle/working/checkpoints/
+  output_path: /kaggle/working/checkpoints/dinos_clip
   model_name: dinos
