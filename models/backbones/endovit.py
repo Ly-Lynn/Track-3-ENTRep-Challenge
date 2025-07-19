@@ -30,8 +30,11 @@ class EndoViTVisionEncoder(VisionEncoder):
             for param in self.backbone.parameters():
                 param.requires_grad = False
             print("🔒 Frozen backbone parameters")
+        else:
+            for param in self.backbone.parameters():
+                param.requires_grad = True
+            print("🔓 Unfrozen backbone parameters")
         
-        # Initialize feature projection layers (head functionality)
         self.feature_projection = nn.Sequential(
             nn.Linear(self.backbone_feature_dim, feature_dim),
             nn.ReLU(inplace=True),
