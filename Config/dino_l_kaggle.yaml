@@ -20,7 +20,7 @@ model:
   temperature: 0.07
 
 trainer:
-  num_epochs: 20
+  num_epochs: 50
   batch_size: 32
   learning_rate: 0.001
   weight_decay: 0.0001
