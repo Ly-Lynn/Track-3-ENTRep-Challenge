@@ -37,12 +37,13 @@ class CLIPTextEncoder(TextEncoder):
     def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor, return_features: bool = False) -> torch.Tensor:
         text_outputs = self.text_model(input_ids=input_ids, attention_mask=attention_mask)
         embeddings = text_outputs.pooler_output
-        embeddings = self.ln(embeddings)
-        embeddings = self.dropout(embeddings)
+        # embeddings = self.ln(embeddings)
+        # embeddings = self.dropout(embeddings)
         embeddings = self.projection(embeddings)
+        text_features = embeddings / embeddings.norm(dim=-1, keepdim=True)
         if return_features:
             return embeddings
-        return F.normalize(embeddings, dim=-1)
+        return text_features
 
 # Vision Encoder Implementations
 class CLIPVisionEncoder(VisionEncoder):
