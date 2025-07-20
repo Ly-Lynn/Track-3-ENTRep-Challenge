@@ -77,17 +77,35 @@ class Searcher:
 
     def build_index(self, save_dir=None):
         """
-        Build the FAISS index from the dataset
+        Build the FAISS index from the dataset or load if already exists
         
         Args:
             save_dir: Optional directory to save the index after building
         """
-        print("Building FAISS index...")
+        if save_dir and os.path.exists(save_dir):
+            # Check if index files exist
+            index_file = os.path.join(save_dir, "vector.index")
+            metadata_file = os.path.join(save_dir, "vector_metadata.pkl")
+            
+            if os.path.exists(index_file) and os.path.exists(metadata_file):
+                try:
+                    print(f"📁 Found existing index at {save_dir}, loading...")
+                    self.load_index(save_dir)
+                    return
+                except Exception as e:
+                    print(f"⚠️ Failed to load existing index: {e}")
+                    print("🔄 Rebuilding index...")
+            else:
+                print(f"📁 Index directory exists but files incomplete, rebuilding...")
+        
+        print("🔨 Building FAISS index...")
         self._build_faiss_index()
         
         if save_dir:
             self.save_index(save_dir)
-            print(f"Index saved to {save_dir}")
+            stats = self.get_stats()
+            print(f"✅ Index built and saved to {save_dir}")
+            print(f"📊 Index stats: {stats['total_images']} images, {stats['embedding_dimension']}D embeddings")
 
     def load_index(self, load_dir):
         """
@@ -98,7 +116,13 @@ class Searcher:
         """
         print(f"Loading FAISS index from {load_dir}")
         self._load_index(load_dir)
-        print("Index loaded successfully")
+        
+        # Validate loaded index
+        stats = self.get_stats()
+        if stats["status"] == "Index loaded" and stats["total_images"] > 0:
+            print(f"✅ Index loaded successfully: {stats['total_images']} images, {stats['embedding_dimension']}D embeddings")
+        else:
+            raise ValueError("Failed to load index properly")
 
     def save_index(self, save_dir):
         """Save the current index and metadata to disk"""

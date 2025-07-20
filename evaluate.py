@@ -28,7 +28,7 @@ def load_config(file_config):
 def load_test_set(json_path):
     with open(json_path, 'r') as f:
         data = json.load(f)
-    data = data['test']
+    data = data['train']
     res = []
     for item in data:
         res.append((item['DescriptionEN'], item['Path']))
@@ -49,52 +49,20 @@ def main():
     searcher = Searcher(config=config)
     searcher.build_index("vector_index")
 
-    # Search
+    # Search once with max k and slice for different k values
     search_results = []
-    all_metrics = {}
+    max_k = max(evaluator_cfg['k_values']) 
     
-    # Initialize metrics storage
-    for k in evaluator_cfg['k_values']:
-        all_metrics[k] = {
-            'hit_rate': 0.0,
-            'recall': 0.0, 
-            'mrr': 0.0
-        }
-    
-    # Collect search results for all queries
     for query, _ in tqdm(test_set, desc="Searching"):
-        query_results = []
-        for k in evaluator_cfg['k_values']:
-            results = searcher.search_by_text(query, k)
-            query_results.append(results)
-        search_results.append(query_results)
+        results = searcher.search_by_text(query, max_k)  
+        search_results.append(results)
     
     print(f"Search results length: {len(search_results)}")
 
-    # Calculate and save average metrics for each k
-    for k_idx, k in enumerate(evaluator_cfg['k_values']):
-        print(f"Evaluating metrics for k={k}")
-        
-        # Get results for current k value
-        k_results = [results[k_idx] for results in search_results]
-        
-        # Calculate metrics
-        final_results = metrics.compute_all_metrics(k_results, [k])
-        metrics.print_results(final_results, [k])
-        
-        # Update running averages
-        all_metrics[k]['hit_rate'] = final_results['hit_rate'][k]
-        all_metrics[k]['recall'] = final_results['recall'][k]
-        all_metrics[k]['mrr'] = final_results['mrr'][k]
+    print("Evaluating metrics for all k values...")
+    final_metrics = metrics.compute_all_metrics(search_results, evaluator_cfg['k_values'])
     
-    # Save average metrics to file
-    with open('average_metrics.txt', 'w') as f:
-        for k in evaluator_cfg['k_values']:
-            f.write(f"Results for k={k}:\n")
-            f.write(f"Average Hit Rate@{k}: {all_metrics[k]['hit_rate']:.3f}\n")
-            f.write(f"Average Recall@{k}: {all_metrics[k]['recall']:.3f}\n") 
-            f.write(f"Average MRR@{k}: {all_metrics[k]['mrr']:.3f}\n")
-            f.write("="*50 + "\n")
+    metrics.print_and_save_results(final_metrics, evaluator_cfg['k_values'], 'final_metrics_train.txt')
 
 if __name__ == "__main__":
     main()

@@ -34,33 +34,32 @@ class Metrics:
 
         hits = 0
         for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results
+            top_k_results = search_results[:k]  
             
             relevant_positions = self._find_relevant_positions(top_k_results, label_path)
             if len(relevant_positions) > 0:
                 hits += 1
         
-        return hits 
+        return hits / len(self.ground_truth)
     
     def recall_at_k(self, 
-                   search_results_list: List[List[Dict[str, Any]]], 
-                   k: int = 5) -> float:
-        
-        total_found_relevant = 0
-        total_relevant = 0
+               search_results_list: List[List[Dict[str, Any]]], 
+               k: int = 5) -> float:
+        total_recall = 0.0
         
         for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results
-            relevant_in_top_k = self._find_relevant_positions(top_k_results, label_path)
-            total_found_relevant += len(relevant_in_top_k)
+            top_k_results = search_results[:k]  
             
-            all_relevant = self._find_relevant_positions(search_results, label_path)
-            total_relevant += len(all_relevant)
+            relevant_in_top_k = self._find_relevant_positions(top_k_results, label_path)
+            found_relevant = len(relevant_in_top_k)
+            
+            total_relevant_for_query = 1  
+            
+            if total_relevant_for_query > 0:
+                query_recall = found_relevant / total_relevant_for_query
+                total_recall += query_recall
         
-        if total_relevant == 0:
-            return 0.0
-        
-        return total_found_relevant / total_relevant
+        return total_recall / len(self.ground_truth)
     
     def mrr_at_k(self, 
                 search_results_list: List[List[Dict[str, Any]]], 
@@ -68,12 +67,12 @@ class Metrics:
         reciprocal_ranks = []
         
         for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results
+            top_k_results = search_results[:k]  # Fixed: slice top-k results
             
             relevant_positions = self._find_relevant_positions(top_k_results, label_path)
             
             if len(relevant_positions) > 0:
-                first_relevant_rank = relevant_positions[0] + 1
+                first_relevant_rank = relevant_positions[0] + 1  # rank is 1-indexed
                 reciprocal_ranks.append(1.0 / first_relevant_rank)
             else:
                 reciprocal_ranks.append(0.0)
@@ -126,6 +125,38 @@ class Metrics:
                     f.write(f"{metric_name}@{k:<8} | {values[k]:.3f}\n")
             
             f.write("="*50 + "\n")
+
+    def save_metrics(self, 
+                    metrics_results: Dict[str, Dict[int, float]], 
+                    k_values: List[int],
+                    filename: str = "metrics_results.txt",
+                    format_style: str = "detailed",
+                    mode: str = "w"):
+        
+        with open(filename, mode) as f:
+            if format_style == "detailed":
+                # Format: "Results for k=5:\n  Hit Rate@5: 0.750"
+                for k in k_values:
+                    f.write(f"Results for k={k}:\n")
+                    f.write(f"  Hit Rate@{k}: {metrics_results['hit_rate'][k]:.3f}\n")
+                    f.write(f"  Recall@{k}: {metrics_results['recall'][k]:.3f}\n") 
+                    f.write(f"  MRR@{k}: {metrics_results['mrr'][k]:.3f}\n")
+                    f.write("="*50 + "\n")
+            else:
+                # Format: "hit_rate@5 | 0.750"
+                for metric_name in ['hit_rate', 'recall', 'mrr']:
+                    values = metrics_results[metric_name]
+                    for k in k_values:
+                        f.write(f"{metric_name}@{k:<8} | {values[k]:.3f}\n")
+                f.write("="*50 + "\n")
+        
+        print(f"💾 Metrics saved to {filename}")
+
+    def print_and_save_results(self, 
+                              metrics_results: Dict[str, Dict[int, float]], 
+                              k_values: List[int],
+                              filename: str = "metrics_results.txt"):
+        self.save_metrics(metrics_results, k_values, filename, "detailed", "w")
 
 
 if __name__ == "__main__":
