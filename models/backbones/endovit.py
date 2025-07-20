@@ -130,15 +130,20 @@ class EndoViTVisionEncoder(VisionEncoder):
         print("✅ Checkpoint loaded successfully")
 
 class OldEndoViTVisionEncoder(nn.Module):
-    def __init__(self, repo_id="egeozsoy/EndoViT", model_filename="pytorch_model.bin",
-                 device="cuda"):
+    def __init__(self, model_name: str = "egeozsoy/EndoViT",
+                 feature_dim: int = 768,
+                 num_classes: int = 7,
+                 dropout: float = 0.1,
+                 freeze_backbone: bool = False,
+                 ckp_path: Optional[str] = None):
         super().__init__()
-        self.device = device
-        self.model = self._load_model(repo_id, model_filename).to(device)
+        self.model_name = model_name
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = self._load_model(self.model_name, ckp_path).to(self.device)
 
-    def _load_model(self, repo_id, model_filename):
-        model_path = snapshot_download(repo_id=repo_id, revision="main")
-        model_weights_path = Path(model_path) / model_filename
+    def _load_model(self, model_name, ckp_path):
+        model_path = snapshot_download(repo_id=model_name, revision="main")
+        model_weights_path = Path(model_path) / "pytorch_model.bin"
         model_weights = torch.load(model_weights_path, map_location="cpu", weights_only=False)['model']
         model = VisionTransformer(patch_size=16, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4, qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6)).eval()
 
