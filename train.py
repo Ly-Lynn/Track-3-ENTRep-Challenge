@@ -26,7 +26,7 @@ def set_seed(seed=42):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 def load_config(file_config):
-    with open(os.path.join('Config', file_config), 'r') as f:
+    with open(os.path.join('Config/train', file_config), 'r') as f:
         config = yaml.safe_load(f)
     return config
 
