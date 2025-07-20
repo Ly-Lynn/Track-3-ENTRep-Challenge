@@ -65,6 +65,17 @@ def create_df_from_json(json_path):
     all_meta = train_meta + val_meta + test_meta
     all_df, train_df, val_df, test_df = pd.DataFrame(all_meta), pd.DataFrame(train_meta), pd.DataFrame(val_meta), pd.DataFrame(test_meta)
     return all_df, train_df, val_df, test_df
-
+def load_test_imgs(path):
+    res = []
+    for img in os.listdir(path):
+        res.append({
+            'Path': img,
+            'label': '',
+            'Type': '',
+            'Classification': '',
+            'DescriptionEN': '', 
+            'Description': ''
+        })
+    return pd.DataFrame(res)
 
 
