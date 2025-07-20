@@ -150,7 +150,8 @@ class OldEndoViTVisionEncoder(nn.Module):
         loading_info = model.load_state_dict(model_weights, strict=False)
         return model
 
-    def forward(self, image_batch):
-        output = self.model.forward_features(image_batch.to(self.device))
+    def forward(self, images, return_features: bool = False):
+        x = images
+        output = self.model.forward_features(x.to(self.device))
         output = F.normalize(output[:, 0], dim=-1)
         return output
