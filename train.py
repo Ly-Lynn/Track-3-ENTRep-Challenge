@@ -87,6 +87,7 @@ def main():
     model = create_medical_vlm(**model_config)
 
     # Create trainer
+    
     trainer = MedicalVLMTrainer(model, 
                                 train_loader, 
                                 val_loader, 
@@ -97,6 +98,9 @@ def main():
     history = trainer.train(
         num_epochs=trainer_config['num_epochs']
     )
+    trainer.ema.apply_shadow()
+    trainer.ema.restore()
+    
     print("🔍 Training model done")
     print(f"🔍 History: {history}")
 

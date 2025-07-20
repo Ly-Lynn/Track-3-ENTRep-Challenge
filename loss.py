@@ -14,8 +14,8 @@ class InfoNCELoss(Loss):
 
     def __call__(self, image_embeds, text_embeds, label_smoothing=0.1):
 
-        image_embeds = F.normalize(image_embeds, p=2, dim=1)
-        text_embeds = F.normalize(text_embeds, p=2, dim=1)
+        # image_embeds = F.normalize(image_embeds, p=2, dim=1)
+        # text_embeds = F.normalize(text_embeds, p=2, dim=1)
         
         logits = torch.matmul(image_embeds, text_embeds.transpose(0, 1)) / self.temperature
         batch_size = logits.shape[0]
