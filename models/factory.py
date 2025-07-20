@@ -3,6 +3,7 @@ from .backbones.dino import DinoV2VisionEncoder
 from .backbones.clip import CLIPVisionEncoder, CLIPTextEncoder
 from .backbones.bert import BERTTextEncoder
 from .backbones.endovit import EndoViTVisionEncoder
+from .backbones.endovit import OldEndoViTVisionEncoder
 
 class VisionEncoderFactory:
     """Factory for creating vision encoders"""
@@ -15,6 +16,8 @@ class VisionEncoderFactory:
             return EndoViTVisionEncoder(**kwargs)
         elif encoder_type.lower() == "dinov2":
             return DinoV2VisionEncoder(**kwargs)
+        elif encoder_type.lower() == "old_endovit":
+            return OldEndoViTVisionEncoder(**kwargs)
         else:
             raise ValueError(f"Unknown vision encoder type: {encoder_type}")
 

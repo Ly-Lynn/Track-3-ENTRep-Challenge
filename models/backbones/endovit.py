@@ -128,3 +128,24 @@ class EndoViTVisionEncoder(VisionEncoder):
         # Load state dict
         self.backbone.load_state_dict(state_dict, strict=False)
         print("✅ Checkpoint loaded successfully")
+
+class OldEndoViTVisionEncoder(nn.Module):
+    def __init__(self, repo_id="egeozsoy/EndoViT", model_filename="pytorch_model.bin",
+                 device="cuda"):
+        super().__init__()
+        self.device = device
+        self.model = self._load_model(repo_id, model_filename).to(device)
+
+    def _load_model(self, repo_id, model_filename):
+        model_path = snapshot_download(repo_id=repo_id, revision="main")
+        model_weights_path = Path(model_path) / model_filename
+        model_weights = torch.load(model_weights_path, map_location="cpu", weights_only=False)['model']
+        model = VisionTransformer(patch_size=16, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4, qkv_bias=True, norm_layer=partial(nn.LayerNorm, eps=1e-6)).eval()
+
+        loading_info = model.load_state_dict(model_weights, strict=False)
+        return model
+
+    def forward(self, image_batch):
+        output = self.model.forward_features(image_batch.to(self.device))
+        output = F.normalize(output[:, 0], dim=-1)
+        return output
