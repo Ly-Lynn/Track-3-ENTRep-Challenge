@@ -1,0 +1,21 @@
+evaluator:
+  batch_size: 32
+  image_size: 224
+  img_dir: Dataset/images/
+  json_path: Dataset/splits_info.json
+  test_path: Dataset/test_set.json
+  k_values: [1, 5, 10]
+
+model:
+  vision_encoder:
+    type: dinov2
+    feature_dim: 768
+    model_name: dinov2_vitb14
+    ckp_path: Pretrained/backbones/dinov2_vitb14/best_model.pth
+  text_encoder:
+    type: clip
+    feature_dim: 768
+    model_name: openai/clip-vit-base-patch32
+  ckp_path: Pretrained/checkpoints/dinob_clip/best.pt
+
+

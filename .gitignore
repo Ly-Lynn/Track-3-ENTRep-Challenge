@@ -9,3 +9,4 @@ __pycache__/
 *.pyz
 vector_index/
 *.txt
+*_index/

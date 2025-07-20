@@ -337,9 +337,12 @@ class Searcher:
 if __name__ == "__main__":
     # Example configuration
     config = {
-        "data": {
-            "path": "Dataset",
-            "json_path": "splits_info.json"
+        "evaluator": {
+            "batch_size": 32,
+            "image_size": 224,
+            "img_dir": "Dataset/images/",
+            "json_path": "Dataset/splits_info.json",
+            "k_values": [1, 5, 10]
         },
         "model": {
             "vision_encoder": {
@@ -362,9 +365,9 @@ if __name__ == "__main__":
     searcher = Searcher(config=config)
     
     # Build index
-    searcher.build_index("vector_index")
+    searcher.build_index("test_index")
     
     # Test search
-    results = searcher.search_by_text("superior septal deviation")
+    results = searcher.search_by_text("edema and polypoid degeneration of the uncinate process", 10)
     print(f"Found {len(results)} results")
     print(results)

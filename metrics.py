@@ -1,98 +1,154 @@
-"""
-Evaluation Metrics for Medical Image Search System
-
-Hit Rate@k: Proportion of queries with at least one relevant item in top-k results
-Recall@k: Proportion of relevant items found in top-k results  
-MRR@k: Mean Reciprocal Rank - average of reciprocal ranks of first relevant items
-
-Relevance is determined by checking if ground truth label_path appears in search results.
-"""
-
-import numpy as np
-from typing import List, Dict, Any, Tuple, Union
-
+import json
+import os
+from typing import List, Dict, Any, Tuple, Optional
 
 class Metrics:
-    def __init__(self, ground_truth: List[Tuple[str, str]]):
-        """Initialize the Metrics evaluator"""
-        self.ground_truth = ground_truth
+    def __init__(self, enhanced_test_file: str = None, test_set_tuples: Optional[List[Tuple[str, List[str]]]] = None):
+        if test_set_tuples is not None:
+            self._init_from_tuples(test_set_tuples)
+        elif enhanced_test_file is not None:
+            self._init_from_file(enhanced_test_file)
+        else:
+            raise ValueError("Either enhanced_test_file or test_set_tuples must be provided")
     
-    def _is_relevant(self, result_path: str, ground_truth_path: str) -> bool:
-        return result_path.strip() == ground_truth_path.strip()
+    def _init_from_file(self, enhanced_test_file: str):
+        self.enhanced_test_data = self._load_enhanced_test_set(enhanced_test_file)
+        self.test_queries = self.enhanced_test_data.get('test_queries', [])
+        
+        print(f"✅ Loaded {len(self.test_queries)} enhanced test queries from file")
+        print(f"📊 Total relevant images in dataset: {self.enhanced_test_data.get('total_relevant_images', 0)}")
     
-    def _find_relevant_positions(self, search_results: List[Dict[str, Any]], ground_truth_path: str) -> List[int]:
+    def _init_from_tuples(self, test_set_tuples: List[Tuple[str, List[str]]]):
+        self.test_queries = []
+        total_relevant = 0
+        
+        for query_desc, relevant_paths in test_set_tuples:
+            query_data = {
+                'query_description': query_desc,
+                'total_relevant_images': len(relevant_paths),
+                'relevant_images': [{'path': path} for path in relevant_paths]
+            }
+            self.test_queries.append(query_data)
+            total_relevant += len(relevant_paths)
+        
+        self.enhanced_test_data = {
+            'total_queries': len(test_set_tuples),
+            'total_relevant_images': total_relevant,
+            'test_queries': self.test_queries
+        }
+        
+        print(f"✅ Loaded {len(test_set_tuples)} enhanced test queries from tuples")
+        print(f"📊 Total relevant images: {total_relevant}")
+    
+    @classmethod
+    def from_test_set_tuples(cls, test_set_tuples: List[Tuple[str, List[str]]]):
+        return cls(test_set_tuples=test_set_tuples)
+        
+    def _load_enhanced_test_set(self, file_path: str) -> Dict:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            return data
+        except Exception as e:
+            raise Exception(f"Error loading enhanced test set: {e}")
+    
+    def _get_relevant_paths_for_query(self, query_idx: int) -> List[str]:
+        if query_idx >= len(self.test_queries):
+            return []
+        
+        query = self.test_queries[query_idx]
+        relevant_paths = [img['path'] for img in query.get('relevant_images', [])]
+        return relevant_paths
+    
+    def _is_relevant(self, result_path: str, relevant_paths: List[str]) -> bool:
+        if not result_path:
+            return False
+        
+        result_filename = os.path.basename(result_path.strip())
+        
+        for rel_path in relevant_paths:
+            rel_filename = os.path.basename(rel_path.strip())
+            if result_filename == rel_filename:
+                return True
+        return False
+    
+    def _find_relevant_positions(self, search_results: List[Dict[str, Any]], 
+                                relevant_paths: List[str]) -> List[int]:
         relevant_positions = []
         for i, result in enumerate(search_results):
-            result_path = result.get("path")
-            if self._is_relevant(result_path, ground_truth_path):
+            result_path = result.get("image_path")
+            if self._is_relevant(result_path, relevant_paths):
                 relevant_positions.append(i)
         return relevant_positions
     
     def hit_rate_at_k(self, 
                      search_results_list: List[List[Dict[str, Any]]], 
                      k: int = 5) -> float:
-
+        if len(search_results_list) != len(self.test_queries):
+            raise ValueError(f"Search results length ({len(search_results_list)}) != test queries length ({len(self.test_queries)})")
+        
         hits = 0
-        for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results[:k]  
+        for query_idx, search_results in enumerate(search_results_list):
+            top_k_results = search_results[:k]
             
-            relevant_positions = self._find_relevant_positions(top_k_results, label_path)
+            relevant_paths = self._get_relevant_paths_for_query(query_idx)
+            relevant_positions = self._find_relevant_positions(top_k_results, relevant_paths)
+            
             if len(relevant_positions) > 0:
                 hits += 1
         
-        return hits / len(self.ground_truth)
+        return hits / len(self.test_queries)
     
     def recall_at_k(self, 
-               search_results_list: List[List[Dict[str, Any]]], 
-               k: int = 5) -> float:
+                   search_results_list: List[List[Dict[str, Any]]], 
+                   k: int = 5) -> float:
+        if len(search_results_list) != len(self.test_queries):
+            raise ValueError(f"Search results length ({len(search_results_list)}) != test queries length ({len(self.test_queries)})")
+        
         total_recall = 0.0
         
-        for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results[:k]  
+        for query_idx, search_results in enumerate(search_results_list):
+            top_k_results = search_results[:k]
             
-            relevant_in_top_k = self._find_relevant_positions(top_k_results, label_path)
-            found_relevant = len(relevant_in_top_k)
+            relevant_paths = self._get_relevant_paths_for_query(query_idx)
+            total_relevant_for_query = len(relevant_paths)
             
-            total_relevant_for_query = 1  
+            if total_relevant_for_query == 0:
+                continue
             
-            if total_relevant_for_query > 0:
-                query_recall = found_relevant / total_relevant_for_query
-                total_recall += query_recall
+            relevant_positions = self._find_relevant_positions(top_k_results, relevant_paths)
+            found_relevant = len(relevant_positions)
+            
+            query_recall = found_relevant / total_relevant_for_query
+            total_recall += query_recall
         
-        return total_recall / len(self.ground_truth)
+        return total_recall / len(self.test_queries)
     
     def mrr_at_k(self, 
                 search_results_list: List[List[Dict[str, Any]]], 
                 k: int = 5) -> float:
+        if len(search_results_list) != len(self.test_queries):
+            raise ValueError(f"Search results length ({len(search_results_list)}) != test queries length ({len(self.test_queries)})")
+        
         reciprocal_ranks = []
         
-        for (description, label_path), search_results in zip(self.ground_truth, search_results_list):
-            top_k_results = search_results[:k]  # Fixed: slice top-k results
+        for query_idx, search_results in enumerate(search_results_list):
+            top_k_results = search_results[:k]
             
-            relevant_positions = self._find_relevant_positions(top_k_results, label_path)
+            relevant_paths = self._get_relevant_paths_for_query(query_idx)
+            relevant_positions = self._find_relevant_positions(top_k_results, relevant_paths)
             
             if len(relevant_positions) > 0:
-                first_relevant_rank = relevant_positions[0] + 1  # rank is 1-indexed
+                first_relevant_rank = relevant_positions[0] + 1
                 reciprocal_ranks.append(1.0 / first_relevant_rank)
             else:
                 reciprocal_ranks.append(0.0)
         
-        return np.mean(reciprocal_ranks)
+        return sum(reciprocal_ranks) / len(reciprocal_ranks)
     
     def compute_all_metrics(self, 
                            search_results_list: List[List[Dict[str, Any]]], 
                            k_values: List[int] = [1, 3, 5, 10]) -> Dict[str, Dict[int, float]]:
-        """
-        Compute all metrics for multiple k values
-        
-        Args:
-            ground_truth: List of (description, label_path) tuples
-            search_results_list: List of search results for each query
-            k_values: List of k values to evaluate
-        
-        Returns:
-            Dictionary with metric names as keys and k-value results as values
-        """
         results = {
             "hit_rate": {},
             "recall": {},
@@ -105,108 +161,28 @@ class Metrics:
             results["mrr"][k] = self.mrr_at_k(search_results_list, k)
         
         return results
-    
-    def print_results(self, 
-                     metrics_results: Dict[str, Dict[int, float]], 
-                     k_values: List[int]):
-        """
-        Print metrics results in a formatted table
         
-        Args:
-            metrics_results: Results from compute_all_metrics
-            k_values: List of k values
-        """
-        # Save metrics to file
-        with open("metrics_results.txt", "a") as f:
-            # Write each metric with k value
-            for metric_name in ['hit_rate', 'recall', 'mrr']:
-                values = metrics_results[metric_name]
-                for k in k_values:
-                    f.write(f"{metric_name}@{k:<8} | {values[k]:.3f}\n")
-            
-            f.write("="*50 + "\n")
-
     def save_metrics(self, 
                     metrics_results: Dict[str, Dict[int, float]], 
                     k_values: List[int],
-                    filename: str = "metrics_results.txt",
+                    filename: str = "enhanced_metrics_results.txt",
                     format_style: str = "detailed",
                     mode: str = "w"):
         
         with open(filename, mode) as f:
             if format_style == "detailed":
-                # Format: "Results for k=5:\n  Hit Rate@5: 0.750"
                 for k in k_values:
                     f.write(f"Results for k={k}:\n")
                     f.write(f"  Hit Rate@{k}: {metrics_results['hit_rate'][k]:.3f}\n")
                     f.write(f"  Recall@{k}: {metrics_results['recall'][k]:.3f}\n") 
                     f.write(f"  MRR@{k}: {metrics_results['mrr'][k]:.3f}\n")
-                    f.write("="*50 + "\n")
+                    f.write("-"*30 + "\n")
             else:
-                # Format: "hit_rate@5 | 0.750"
                 for metric_name in ['hit_rate', 'recall', 'mrr']:
                     values = metrics_results[metric_name]
                     for k in k_values:
                         f.write(f"{metric_name}@{k:<8} | {values[k]:.3f}\n")
-                f.write("="*50 + "\n")
+            
+            f.write(f"\nNOTE: Metrics computed using enhanced test set with multiple relevant images.\n")
         
-        print(f"💾 Metrics saved to {filename}")
-
-    def print_and_save_results(self, 
-                              metrics_results: Dict[str, Dict[int, float]], 
-                              k_values: List[int],
-                              filename: str = "metrics_results.txt"):
-        self.save_metrics(metrics_results, k_values, filename, "detailed", "w")
-
-
-if __name__ == "__main__":
-    # Test với dữ liệu mẫu - format mới
-    
-    # Ground truth: [(description, label_path), ...]
-    ground_truth = [
-        ("normal vocal cord tissue", "img1.jpg"),
-        ("polyp in the throat", "img5.jpg"), 
-        ("inflammation of epiglottis", "img10.jpg")
-    ]
-    
-    # Search results từ FAISS cho mỗi query
-    search_results_list = [
-        # Results cho query 1: img1.jpg ở vị trí đầu -> relevant
-        [
-            {"image_path": "img1.jpg", "sim_score": 0.9},   # relevant (match)
-            {"image_path": "img2.jpg", "sim_score": 0.8},   # not relevant
-            {"image_path": "img3.jpg", "sim_score": 0.7},   # not relevant
-        ],
-        # Results cho query 2: img5.jpg ở vị trí thứ 2 -> relevant
-        [
-            {"image_path": "img4.jpg", "sim_score": 0.85},  # not relevant
-            {"image_path": "img5.jpg", "sim_score": 0.75},  # relevant (match)
-            {"image_path": "img6.jpg", "sim_score": 0.65},  # not relevant
-        ],
-        # Results cho query 3: img10.jpg không có trong top-3 -> not relevant
-        [
-            {"image_path": "img7.jpg", "sim_score": 0.8},   # not relevant
-            {"image_path": "img8.jpg", "sim_score": 0.7},   # not relevant
-            {"image_path": "img9.jpg", "sim_score": 0.6},   # not relevant
-        ]
-    ]
-    
-    # Test metrics
-    metrics = Metrics(ground_truth)
-    
-    print("Testing Metrics với ground truth và search results:")
-    
-    # Test từng metric riêng lẻ
-    for k in [1, 2, 3]:
-        hit_rate = metrics.hit_rate_at_k(search_results_list, k)
-        recall = metrics.recall_at_k(search_results_list, k)
-        mrr = metrics.mrr_at_k(search_results_list, k)
-        
-        print(f"\nk={k}:")
-        print(f"  Hit Rate@{k}: {hit_rate:.3f}")
-        print(f"  Recall@{k}: {recall:.3f}")
-        print(f"  MRR@{k}: {mrr:.3f}")
-    
-    # Test tất cả metrics cùng lúc
-    all_metrics = metrics.compute_all_metrics(search_results_list, [1, 2, 3, 5])
-    metrics.print_results(all_metrics, [1, 2, 3, 5]) 
+        print(f"💾 Enhanced metrics saved to {filename}")

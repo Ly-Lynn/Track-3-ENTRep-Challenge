@@ -1,4 +1,3 @@
-from evaluator import evaluate_text_to_image_search
 from models.model import create_medical_vlm
 from utils import load_json, validate_json, create_df_from_json
 from torch.utils.data import DataLoader
@@ -11,12 +10,12 @@ import os
 from utils import create_df_from_json
 from torchvision import transforms
 import json
-from metrics import Metrics
+from metrics import Metrics  # Now uses enhanced metrics
 from searcher import Searcher
 from tqdm import tqdm
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Evaluate a MedicalVLM model')
+    parser = argparse.ArgumentParser(description='Evaluate a MedicalVLM model with enhanced test set')
     parser.add_argument('--file_config', type=str, default='endovit.yaml', help='File config')
     return parser.parse_args()
 
@@ -25,13 +24,27 @@ def load_config(file_config):
         config = yaml.safe_load(f)
     return config
 
-def load_test_set(json_path):
-    with open(json_path, 'r') as f:
+def load_enhanced_test_set(enhanced_test_path):
+    """
+    Load enhanced test set with multiple relevant images per query
+    
+    Returns:
+        List of (query_description, original_path) tuples for compatibility
+    """
+    with open(enhanced_test_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    data = data['train']
+    
+    test_queries = data.get('test_queries', [])
     res = []
-    for item in data:
-        res.append((item['DescriptionEN'], item['Path']))
+    for item in test_queries:
+        relevent_imgs = []
+        for img in item['relevant_images']:
+            relevent_imgs.append(img['path'])
+        res.append((item['query_description'], relevent_imgs))
+    
+    print(f"✅ Loaded {len(test_queries)} enhanced test queries")
+    print(f"📊 Total relevant images in dataset: {data.get('total_relevant_images', 0)}")
+    
     return res
 
 def main():
@@ -40,29 +53,52 @@ def main():
     model_cfg = config['model']
     evaluator_cfg = config['evaluator']
 
-    # Load test set
-    test_set = load_test_set(os.path.join(evaluator_cfg['json_path']))
+    original_dataset_path = evaluator_cfg['json_path']  # For building index
+    enhanced_test_path = evaluator_cfg.get('test_path')  # For evaluation
+    
+    print(f"📂 Original dataset: {original_dataset_path}")
+    print(f"📂 Enhanced test set: {enhanced_test_path}")
+
+    test_set = load_enhanced_test_set(enhanced_test_path)
     print(f"Test set length: {len(test_set)}")
-    metrics = Metrics(test_set)
+    
+    metrics = Metrics.from_test_set_tuples(test_set)
 
-    # Build index
     searcher = Searcher(config=config)
-    searcher.build_index("vector_index")
+    searcher.build_index(f"{args.file_config.split('.')[0]}_index")
 
-    # Search once with max k and slice for different k values
     search_results = []
     max_k = max(evaluator_cfg['k_values']) 
+    all_res = []
     
-    for query, _ in tqdm(test_set, desc="Searching"):
+    print(f"🔍 Searching with max_k={max_k} for {len(test_set)} queries...")
+    for query, gt in tqdm(test_set, desc="Searching"):
         results = searcher.search_by_text(query, max_k)  
         search_results.append(results)
+        all_res.append({
+            "query": query,
+            "gt": gt,
+            "results": results
+        })
     
+    search_results_file = f"search_results_{args.file_config.split('.')[0]}_enhanced.json"
+    with open(search_results_file, "w") as f:
+        json.dump(all_res, f, indent=4)
+    print(f"💾 Search results saved to: {search_results_file}")
     print(f"Search results length: {len(search_results)}")
 
-    print("Evaluating metrics for all k values...")
-    final_metrics = metrics.compute_all_metrics(search_results, evaluator_cfg['k_values'])
+    print("🔢 Evaluating enhanced metrics for all k values...")
     
-    metrics.print_and_save_results(final_metrics, evaluator_cfg['k_values'], 'final_metrics_train.txt')
+    try:
+        final_metrics = metrics.compute_all_metrics(search_results, evaluator_cfg['k_values'])
+        
+        output_file = f'enhanced_metrics_{args.file_config.split(".")[0]}.txt'
+        metrics.save_metrics(final_metrics, evaluator_cfg['k_values'], output_file)
+        
+    except Exception as e:
+        print(f"❌ Error during metrics computation: {e}")
+        print("Please check that search results format is compatible with enhanced metrics")
+        raise
 
 if __name__ == "__main__":
     main()
