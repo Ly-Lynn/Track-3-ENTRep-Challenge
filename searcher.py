@@ -167,16 +167,16 @@ class Searcher:
             raise ValueError("Configuration required to compute embeddings")
             
         # Load dataset - using test split for embeddings
-        all_df, _, _, _ = create_df_from_json(
+        all_df, _, _, test_df = create_df_from_json(
             self.config["evaluator"]["json_path"]
         )
         
         # Store dataframe for later use
-        self.data_frame = all_df
+        self.data_frame = test_df
 
         # Create dataset with proper path
         dataset = MedicalDataset(
-            all_df,
+            test_df,
             self.config["evaluator"]["img_dir"],
             transform=self.transform
         )
