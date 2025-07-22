@@ -28,22 +28,19 @@ def build_description_to_paths_map(data: Dict) -> Dict[str, List[Dict]]:
     description_map = defaultdict(list)
     
     # Process all splits: train, test, val
-    for split_name in ['train', 'test', 'val']:
-        if split_name not in data:
-            continue
-            
-        for item in data[split_name]:
-            desc_en = item.get('DescriptionEN', '').strip()
-            if desc_en:  # Only process non-empty descriptions
-                image_info = {
-                    'path': item.get('Path', ''),
-                    'classification': item.get('Classification', ''),
-                    'type': item.get('Type', ''),
-                    'description_vi': item.get('Description', ''),
-                    'description_en': desc_en,
-                    'source_split': split_name
-                }
-                description_map[desc_en].append(image_info)
+
+    for item in data['test']:
+        desc_en = item.get('DescriptionEN', '').strip()
+        if desc_en:  # Only process non-empty descriptions
+            image_info = {
+                'path': item.get('Path', ''),
+                'classification': item.get('Classification', ''),
+                'type': item.get('Type', ''),
+                'description_vi': item.get('Description', ''),
+                'description_en': desc_en,
+                'source_split': 'test'
+            }
+            description_map[desc_en].append(image_info)
     
     return description_map
 
@@ -194,15 +191,16 @@ def main():
     print(f"Output file: {args.output}")
     
     # Load and process data
-    data = load_splits_data(args.input)
+    alldata = load_splits_data(args.input)
+    print(alldata['test'][0])
     print("✅ Data loaded successfully")
     
     # Build description to paths mapping
-    description_map = build_description_to_paths_map(data)
+    description_map = build_description_to_paths_map(alldata)
     print(f"✅ Built mapping for {len(description_map)} unique descriptions")
     
     # Create enhanced test set
-    enhanced_test = create_enhanced_test_set(data, description_map)
+    enhanced_test = create_enhanced_test_set(alldata, description_map)
     print(f"✅ Created enhanced test set with {len(enhanced_test)} queries")
     
     # Print statistics and examples
