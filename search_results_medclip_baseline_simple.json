@@ -1,0 +1,2444 @@
+[
+  {
+    "query": "edema of the arytenoid cartilages",
+    "relevant_paths": [
+      "17104182_231109101101164831_954_image01.png",
+      "22161247_231220142853674831_954_image03.png",
+      "15005172_230913080858365831_954_image03.png",
+      "15006723_230808105100692831_954_image06.png",
+      "15006723_230808105100692831_954_image05.png",
+      "17097046_231208091356464831_954_image08.png",
+      "17097046_231208091356464831_954_image07.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "tonsillar hypertrophy",
+    "relevant_paths": [
+      "20071315_230914090827079831_954_image07.png",
+      "23148386_230627091349211831_121_image06.png",
+      "17100170_230523141152109831_954_image01.png",
+      "22062598_231212082119769831_954_image05.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "superior septal deviation",
+    "relevant_paths": [
+      "20079258_230929084533150831_954_image02.png",
+      "23110452_230822091603718831_949_image03.png",
+      "16146146_230410085218629831_121_image01.png",
+      "23077742_230424111606385831_121_image02.png",
+      "22105516_230926103043484831_954_image05.png",
+      "23922498_230622214653118831_121_image04.png",
+      "23146949_230624143545369831_949_image04.png",
+      "22117472_231123095255631831_954_image04.png",
+      "22111085_230410093848009831_121_image03.png",
+      "23301219_231208104931498831_121_image06.png",
+      "23079362_230414151023080831_121_image05.png",
+      "15017255_231107104450948831_954_image05.png",
+      "23301219_231208104931498831_121_image03.png",
+      "22098600_231228110038550831_121_image05.png",
+      "23115775_230522074317232831_949_image02.png",
+      "23146990_230905092441106831_954_image04.png",
+      "17097561_231107095542012831_954_image06.png",
+      "22160111_231123094147396831_954_image05.png",
+      "17103328_230608080153879831_949_image04.png",
+      "22110986_230407073620409831_121_image01.png",
+      "23147279_230630142751852831_954_image01.png",
+      "16146146_230410085218629831_121_image05.png",
+      "22161247_231220142853674831_954_image06.png",
+      "22109700_230914081528019831_121_image04.png",
+      "23925463_231024085805648831_954_image05.png",
+      "23079362_230414151023080831_121_image03.png",
+      "19010940_230929141319288831_121_image03.png",
+      "23301942_231211084924551831_954_image03.png",
+      "19079363_230907102622799831_954_image01.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure",
+    "relevant_paths": [
+      "23114708_230519104404520831_954_image01.png",
+      "20071749_231002085236567831_121_image07.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "septal deviation",
+    "relevant_paths": [
+      "19015673_230517101136435831_121_image03.png",
+      "22106607_231101083348296831_121_image02.png",
+      "15009138_230605085238215831_121_image05.png",
+      "17096145_230817081318039831_954_image03.png",
+      "17093219_231208092055263831_954_image01.png",
+      "19011418_231221110452473831_954_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "lingual tonsillar hypertrophy",
+    "relevant_paths": [
+      "13137944_240812091331820831_121_image05.png",
+      "23925027_230713225600420831_954_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "edema of arytenoid cartilages",
+    "relevant_paths": [
+      "13144271_240321094445974831_121_image06.png",
+      "13141644_241011081009932831_121_image07.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "a spur on the septum",
+    "relevant_paths": [
+      "19090812_231229090550594831_954_image06.png",
+      "15006335_230821080455237831_954_image06.png",
+      "22147816_231006095156735831_954_image04.png",
+      "22070648_230804095009268831_954_image08.png",
+      "22069256_231228083314949831_954_image05.png",
+      "23146990_230905092441106831_954_image03.png",
+      "23922415_230626075146250831_954_image09.png",
+      "19010940_230929141319288831_121_image06.png",
+      "23302232_231211085718508831_954_image07.png",
+      "13135998_240329090725185831_121_image03.png",
+      "17097561_230921074417169831_949_image07.png",
+      "22161247_231213090159744831_954_image04.png",
+      "19015673_230517101136435831_121_image06.png",
+      "19010116_231019085645499831_954_image05.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "whitish mucus in the nasopharynx",
+    "relevant_paths": [
+      "19010762_230626101458296831_121_image04.png",
+      "19010762_230626101458296831_121_image06.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "superior septal deviation\r\nthe middle turbinate mucosa is pale",
+    "relevant_paths": [
+      "17099724_231207091636363831_954_image05.png",
+      "22107682_231012095632670831_954_image03.png",
+      "22079003_230912104446252831_954_image06.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "presence of nasal watery discharge",
+    "relevant_paths": [
+      "19092099_231120095539387831_954_image03.png",
+      "19017038_231010150720248831_954_image06.png",
+      "20069187_230418083403330831_121_image04.png",
+      "23113749_231031083607161831_954_image04.png",
+      "19017038_231010150720248831_954_image03.png",
+      "23110663_231110142111262831_121_image07.png",
+      "23109714_231114101029933831_949_image05.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "the tympanic membrane is intact but thickened, the cone of light is not visualized",
+    "relevant_paths": [
+      "22135760_230328074205309831_121_image02.png",
+      "22135759_230328092140992831_121_image03.png",
+      "17103375_231229120934669831_121_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "edema and erythema of the arytenoid cartilages",
+    "relevant_paths": [
+      "19086380_231206093946060831_954_image08.png",
+      "22069859_231012094133633831_954_image01.png",
+      "22041164_230829083212855831_954_image05.png",
+      "23079298_230411095149642831_121_image07.png",
+      "15017797_231004095125295831_954_image06.png",
+      "19010762_231025091014395831_954_image06.png",
+      "22069859_231012094133633831_954_image03.png",
+      "17101474_231023082940450831_954_image08.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "a streak of purulent discharge from the meatus moving toward the nasopharynx",
+    "relevant_paths": [
+      "22148095_230329083626022831_121_image05.png",
+      "16151965_230707153111316831_954_image04.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "white mucus on the nasopharynx",
+    "relevant_paths": [
+      "23927207_231107100440440831_954_image08.png",
+      "19015673_230517101136435831_121_image04.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "the tympanic membrane is intact but slightly thickened, the cone of light is not visualized",
+    "relevant_paths": [
+      "19018485_230609081358914831_121_image01.png",
+      "19010940_230929141319288831_121_image02.png",
+      "19011099_231114101655268831_954_image01.png",
+      "23078997_230405083240983831_121_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "edema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy",
+    "relevant_paths": [
+      "16150712_231116104929033831_954_image01.png",
+      "17101474_231023082940450831_954_image09.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "paradoxical middle turbinate",
+    "relevant_paths": [
+      "23302232_231211085718508831_954_image05.png",
+      "19014832_230801103515635831_954_image03.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "omega-shaped epiglottis",
+    "relevant_paths": [
+      "16151534_230713092020564831_954_image03.png",
+      "13140140_240710091845428831_954_image07.png",
+      "13140140_241001094445032831_954_image03.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "posterior commissure hypertrophy \r\nthe vocal cords are edematous\r\nsmall callous-like growths on the middle section of the vocal cords (Bilateral vocal cord nodules)",
+    "relevant_paths": [
+      "19012499_230908090243540831_954_image04.png",
+      "19012499_230908090243540831_954_image03.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "white ear discharge in the external auditory canal\r\nthe tympanic membrane is not visualized",
+    "relevant_paths": [
+      "23148063_230817153842368831_121_image01.png",
+      "23145157_231009092953020831_121_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "a pale mass protruding from the superior meatus, suspected of polyp",
+    "relevant_paths": [
+      "17097561_230921074417169831_949_image02.png",
+      "17093219_231208092055263831_954_image03.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "a spur on the septum touching the inferior turbinate",
+    "relevant_paths": [
+      "22135185_230807110142441831_954_image05.png",
+      "22099094_230822104055146831_121_image05.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  },
+  {
+    "query": "superior septal deviation\r\nthe nasal mucosa is pale",
+    "relevant_paths": [
+      "23926891_230907103240262831_954_image03.png",
+      "22043806_231018102225814831_954_image02.png"
+    ],
+    "results": [
+      {
+        "image_path": "Dataset/images/23147412_231218104909684831_954_image07.png",
+        "path": "23147412_231218104909684831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề sung huyết\r\ndây thanh (P) sung huyết",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nthe right vocal cord is erythematous"
+      },
+      {
+        "image_path": "Dataset/images/17089462_231004112419923831_954_image05.png",
+        "path": "17089462_231004112419923831_954_image05.png",
+        "similarity": 0.0,
+        "classification": "vc-open",
+        "type": "abnormal",
+        "description": "thành sau họng đọng dịch nhầy\r\nsụn phễu phù nề sung huyết\r\nquá phát mép sau\r\ndây thanh 2 bên phù nề\r\nxóa thanh thất",
+        "description_en": "white discharge on the posterior wall of the pharynx\r\nedema and erythema of the arytenoid cartilages\r\nposterior commissure hypertrophy\r\nvocal cords are edematous\r\nventricular obliteration"
+      },
+      {
+        "image_path": "Dataset/images/13136475_240614135513901831_954_image04.png",
+        "path": "13136475_240614135513901831_954_image04.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "dây thanh phù nề, khép không sát khi phát âm",
+        "description_en": "vocal cord edema,incomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/23114708_230519104404520831_954_image01.png",
+        "path": "23114708_230519104404520831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "",
+        "description": "sụn phễu phù nề sung huyết \r\ndây thanh khép không kín",
+        "description_en": "edema and erythema of the arytenoid cartilages\r\nincomplete glottic closure"
+      },
+      {
+        "image_path": "Dataset/images/17097561_231107095542012831_954_image07.png",
+        "path": "17097561_231107095542012831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "niêm mạc vòm sung huyết\r\ndịch nhầy trắng đục từ khe mũi chảy xuống vòm",
+        "description_en": "the nasopharynx is erythematous\r\nwhite mucus from the meatus moving toward the nasopharynx"
+      },
+      {
+        "image_path": "Dataset/images/20079258_230929084533150831_954_image02.png",
+        "path": "20079258_230929084533150831_954_image02.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "vẹo vách ngăn phần cao",
+        "description_en": "superior septal deviation"
+      },
+      {
+        "image_path": "Dataset/images/20071315_230914090827079831_954_image07.png",
+        "path": "20071315_230914090827079831_954_image07.png",
+        "similarity": 0.0,
+        "classification": "throat",
+        "type": "abnormal",
+        "description": "amidan 2 bên quá phát",
+        "description_en": "tonsillar hypertrophy "
+      },
+      {
+        "image_path": "Dataset/images/23145424_230623105638788831_121_image06.png",
+        "path": "23145424_230623105638788831_121_image06.png",
+        "similarity": 0.0,
+        "classification": "nose-left",
+        "type": "abnormal",
+        "description": "chảy máu mũi từ phần trước vách ngăn",
+        "description_en": "epistaxis from the anterior part of the septum"
+      },
+      {
+        "image_path": "Dataset/images/17104182_231109101101164831_954_image01.png",
+        "path": "17104182_231109101101164831_954_image01.png",
+        "similarity": 0.0,
+        "classification": "vc-closed",
+        "type": "abnormal",
+        "description": "sụn phễu phù nề",
+        "description_en": "edema of the arytenoid cartilages "
+      },
+      {
+        "image_path": "Dataset/images/15005513_231030084038267831_121_image01.png",
+        "path": "15005513_231030084038267831_121_image01.png",
+        "similarity": 0.0,
+        "classification": "ear-right",
+        "type": "abnormal",
+        "description": "ráy tai che kín ống tai ngoài\r\nmàng nhĩ chưa quan sát được",
+        "description_en": "cerumen completely obstructs the ear canal\r\nthe tympanic membrane is not visualized"
+      }
+    ]
+  }
+]

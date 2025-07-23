@@ -1,7 +1,7 @@
 evaluator:
   batch_size: 32
   image_size: 224
-  img_dir: Dataset/images/
+  img_dir: Dataset/test/
   json_path: Dataset/splits_info.json
   test_path: Dataset/test_set.json
   k_values: [1, 5, 10]
