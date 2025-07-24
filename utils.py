@@ -25,7 +25,8 @@ import pandas as pd
 import os
 import json
 import re
-
+from collections import defaultdict
+from tqdm import tqdm
 
 def load_json(json_path):
     with open(json_path, 'r') as f:
@@ -79,3 +80,21 @@ def load_test_imgs(path):
     return pd.DataFrame(res)
 
 
+def create_entrep_testset(json_path):
+    data = load_json(json_path)
+    test_raw = data["test"]
+    testset = defaultdict(list)
+    print(f"Creating entrep testset from {json_path}...")
+    for item in tqdm(test_raw):
+        query = item['DescriptionEN']
+        if query:
+            sample = {
+                'Path': item['Path'],
+                'Classification': item['Classification'],
+                'Description': item['Description'],
+                'DescriptionEN': item['DescriptionEN'],
+                'Type': item['Type']
+            }
+            testset[query].append(sample)
+    return testset
+# def create_entrep_testdf(json_path):
