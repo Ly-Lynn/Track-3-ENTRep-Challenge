@@ -1,18 +1,19 @@
-from models.model import create_medical_vlm
-from utils import load_json, validate_json, create_df_from_json
-from torch.utils.data import DataLoader
-import torch
-import random
-import numpy as np
 import argparse
-import yaml
-import os
-from utils import create_df_from_json
-from torchvision import transforms
 import json
-from metrics import Metrics  # Now uses enhanced metrics
-from searcher import Searcher
+import os
+import random
+
+import numpy as np
+import torch
+import yaml
+from torch.utils.data import DataLoader
+from torchvision import transforms
 from tqdm import tqdm
+
+from metrics import Metrics
+from models.model import create_medical_vlm
+from searcher import Searcher
+from utils import load_json, validate_json, create_df_from_json
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Evaluate a MedicalVLM model with enhanced test set')
@@ -35,17 +36,17 @@ def load_enhanced_test_set(enhanced_test_path):
         data = json.load(f)
     
     test_queries = data.get('test_queries', [])
-    res = []
+    results = []
     for item in test_queries:
-        relevent_imgs = []
+        relevant_images = []
         for img in item['relevant_images']:
-            relevent_imgs.append(img['path'])
-        res.append((item['query_description'], relevent_imgs))
+            relevant_images.append(img['path'])
+        results.append((item['query_description'], relevant_images))
     
     print(f"✅ Loaded {len(test_queries)} enhanced test queries")
     print(f"📊 Total relevant images in dataset: {data.get('total_relevant_images', 0)}")
     
-    return res
+    return results
 
 def main():
     args = parse_args()

@@ -10,8 +10,8 @@ model:
   vision_encoder:
     type: dinov2
     feature_dim: 768
-    model_name: dinov2_vitb14
-    ckp_path: Pretrained/Pretrained/backbones/dinov2_vitb14/best_model.pth
+    model_name: dinov2_vitl14
+    ckp_path: Pretrained/Pretrained/backbones/dinov2_vitl14/best_model.pth
   text_encoder:
     type: clip
     feature_dim: 768

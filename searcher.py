@@ -6,24 +6,32 @@ Medical Image Searcher using FAISS for efficient similarity search
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-from transformers import CLIPProcessor, CLIPModel
-import torch
-from typing import List, Dict, Any
-from PIL import Image
-from torchvision import transforms
 import pickle
+from typing import List, Dict, Any, Optional
+
 import faiss
 import numpy as np
-from utils import create_df_from_json
+import torch
+from PIL import Image
 from torch.utils.data import DataLoader
+from torchvision import transforms
+from transformers import CLIPProcessor, CLIPModel
 from tqdm import tqdm
+
+from constants import (
+    CLIP_MEAN, CLIP_STD, CLIP_MAX_LENGTH, CLIP_MODEL_NAME, 
+    DEFAULT_BATCH_SIZE, DEFAULT_NUM_WORKERS, IMAGE_SIZE
+)
 from dataset import MedicalDataset
 from models.model import create_medical_vlm
+from utils import create_df_from_json
 
 class Searcher:
-    def __init__(self, model=None, config=None):
+    """Medical Image Searcher using FAISS for efficient similarity search."""
+    
+    def __init__(self, model: Optional[torch.nn.Module] = None, config: Optional[Dict] = None):
         """
-        Initialize the Searcher with a model and configuration
+        Initialize the Searcher with a model and configuration.
         
         Args:
             model: Pre-trained medical VLM model or None (will create from config)
@@ -33,7 +41,7 @@ class Searcher:
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         
         # Initialize CLIP processor for text encoding
-        self.text_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+        self.text_processor = CLIPProcessor.from_pretrained(CLIP_MODEL_NAME)
         
         # Initialize or load model
         if model is None and config is not None:
@@ -45,20 +53,23 @@ class Searcher:
             self.model.to(self.device)
             self.model.eval()
 
-        # Initialize transform for images (same as dataset)
-        self.transform = transforms.Compose([
-            transforms.Resize(224),
-            transforms.CenterCrop(224),
-            transforms.ToTensor(),
-            transforms.Normalize(mean=[0.48145466, 0.4578275, 0.40821073],
-                                std=[0.26862954, 0.26130258, 0.27577711])
-        ])
+        # Initialize transform for images (consistent with dataset)
+        self.transform = self._create_image_transform()
         
         # Initialize storage variables
-        self.index = None
-        self.image_paths = None
-        self.data_frame = None
-        self.image_embeddings = None
+        self.index: Optional[faiss.Index] = None
+        self.image_paths: Optional[List[str]] = None
+        self.data_frame: Optional[Any] = None
+        self.image_embeddings: Optional[np.ndarray] = None
+    
+    def _create_image_transform(self) -> transforms.Compose:
+        """Create image transformation pipeline."""
+        return transforms.Compose([
+            transforms.Resize(IMAGE_SIZE),
+            transforms.CenterCrop(IMAGE_SIZE),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=CLIP_MEAN, std=CLIP_STD)
+        ])
 
     def _create_model_from_config(self, config):
         """Create model from configuration"""
@@ -183,9 +194,9 @@ class Searcher:
         
         dataloader = DataLoader(
             dataset,
-            batch_size=32,
+            batch_size=DEFAULT_BATCH_SIZE,
             shuffle=False,
-            num_workers=0 
+            num_workers=DEFAULT_NUM_WORKERS 
         )
         
         all_image_embeddings = []
@@ -241,11 +252,11 @@ class Searcher:
         Returns:
             Normalized text embedding as numpy array
         """
-        # Use CLIP processor to tokenize text (same as dataset)
+        # Use CLIP processor to tokenize text (consistent with dataset)
         text_inputs = self.text_processor(
             text=query,
             padding="max_length",
-            max_length=77,
+            max_length=CLIP_MAX_LENGTH,
             truncation=True,
             return_tensors="pt"
         )
