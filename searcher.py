@@ -345,35 +345,191 @@ class Searcher:
             "index_type": type(self.index).__name__
         }
 
+class MedCLIPSearcher:
+    def __init__(self, model=None, config=None):
+        self.model = model
+        self.config = config
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        
+        # Fix for MedCLIP library bug - monkey patch the convert_rgb method
+        from medclip.dataset import MedCLIPFeatureExtractor
+        if not hasattr(MedCLIPFeatureExtractor, 'convert_rgb'):
+            MedCLIPFeatureExtractor.convert_rgb = MedCLIPFeatureExtractor.do_convert_rgb
+        
+        self.processor = MedCLIPProcessor()
+        self.model = MedCLIPModel(vision_cls=MedCLIPVisionModelViT)
+        try:
+            print("Trying to load pretrained weights...")
+            self.model.from_pretrained()
+            print("✅ Model loaded with pretrained weights")
+        except Exception as e:
+            print(f"Failed to load pretrained weights: {e}")
+        self.model.to(self.device)
+        self.model.eval()
+        
+        # Initialize storage variables
+        self.index = None
+        self.image_paths = None
+
+    def _compute_embeddings(self):
+        img_dir = self.config["evaluator"]["img_dir"]
+        img_embeddings = []
+        img_paths = []
+        
+        print("Computing embeddings for MedCLIP...")
+        for cls_path in tqdm(os.listdir(img_dir), desc="Processing classes"):
+            cls_full_path = os.path.join(img_dir, cls_path)
+            if not os.path.isdir(cls_full_path):
+                continue
+                
+            for img_path in os.listdir(cls_full_path):
+                if not img_path.lower().endswith(('.png', '.jpg', '.jpeg')):
+                    continue
+                    
+                try:
+                    full_img_path = os.path.join(cls_full_path, img_path)
+                    img = Image.open(full_img_path)
+                    inputs = self.processor(images=img, return_tensors="pt")
+                    inputs = {k: v.to(self.device) for k, v in inputs.items()}
+                    
+                    with torch.no_grad():
+                        outputs = self.model(**inputs)
+                        img_embeds = outputs['img_embeds']
+                        img_embeds = img_embeds.cpu().numpy().astype('float32')
+                    
+                    img_embeddings.append(img_embeds)
+                    # Store relative path like the ENTRepSearcher does
+                    relative_path = os.path.join(cls_path, img_path)
+                    img_paths.append(relative_path)
+                    
+                except Exception as e:
+                    print(f"Error processing {img_path}: {e}")
+                    continue
+        
+        # Convert list of embeddings to numpy array
+        if img_embeddings:
+            img_embeddings = np.vstack(img_embeddings)
+        else:
+            raise ValueError("No valid images found to compute embeddings")
+            
+        return {
+            "image_embeddings": img_embeddings,
+            "image_paths": img_paths
+        }
+    
+    def _build_faiss_index(self):
+        embedding_results = self._compute_embeddings()
+        
+        # Embeddings are already numpy arrays from _compute_embeddings
+        self.image_embeddings = embedding_results["image_embeddings"].astype('float32')
+        self.image_paths = embedding_results["image_paths"]
+        
+        # Normalize embeddings for cosine similarity
+        faiss.normalize_L2(self.image_embeddings)
+        
+        # Create FAISS index
+        d = self.image_embeddings.shape[1]  # dimension
+        self.index = faiss.IndexFlatIP(d)   # Inner product index (cosine similarity after normalization)
+        self.index.add(self.image_embeddings)
+        
+        print(f"Built FAISS index with {self.index.ntotal} embeddings")
+    
+    def _encode_text_query(self, query: str) -> np.ndarray:
+        inputs = self.processor(text=[query], return_tensors="pt")
+        inputs = {k: v.to(self.device) for k, v in inputs.items()}
+        with torch.no_grad():
+            outputs = self.model(**inputs)
+            text_embeds = outputs['text_embeds']
+            text_embeds = text_embeds.cpu().numpy().astype('float32')
+        return text_embeds
+    
+    def _search_with_embeddings(self, query_embedding: np.ndarray, top_k: int = 5) -> List[Dict[str, Any]]:
+        if self.index is None:
+            raise ValueError("Index not built or loaded. Call build_index() or load_index() first.")
+        faiss.normalize_L2(query_embedding)
+        similarities, indices = self.index.search(query_embedding, top_k)   
+
+        results = []
+        for idx, sim in zip(indices[0], similarities[0]):
+            path = self.image_paths[idx]
+            results.append({
+                'path': path,
+                'similarity': float(sim),
+            })
+        return results
+    
+    def search_by_text(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        query_embedding = self._encode_text_query(query)
+        return self._search_with_embeddings(query_embedding, top_k)
+    
+    def build_index(self, save_dir=None):
+        """
+        Build the FAISS index from the dataset or load if already exists
+        
+        Args:
+            save_dir: Optional directory to save the index after building
+        """
+        if save_dir and os.path.exists(save_dir):
+            # Check if index files exist
+            index_file = os.path.join(save_dir, "vector.index")
+            metadata_file = os.path.join(save_dir, "vector_metadata.pkl")
+            
+            if os.path.exists(index_file) and os.path.exists(metadata_file):
+                try:
+                    print(f"📁 Found existing index at {save_dir}, loading...")
+                    self.load_index(save_dir)
+                    return
+                except Exception as e:
+                    print(f"⚠️ Failed to load existing index: {e}")
+                    print("🔄 Rebuilding index...")
+        
+        print("🔨 Building FAISS index...")
+        self._build_faiss_index()
+        
+        if save_dir:
+            self.save_index(save_dir)
+            stats = self.get_stats()
+            print(f"✅ Index built and saved to {save_dir}")
+            print(f"📊 Index stats: {stats['total_images']} images, {stats['embedding_dimension']}D embeddings")
+    
+    def save_index(self, save_dir):
+        os.makedirs(save_dir, exist_ok=True)
+        faiss.write_index(self.index, os.path.join(save_dir, "vector.index"))
+        with open(os.path.join(save_dir, "vector_metadata.pkl"), "wb") as f:
+            pickle.dump({
+                "image_paths": self.image_paths
+            }, f)
+    
+
+
 if __name__ == "__main__":
     # Example configuration
     config = {
         "evaluator": {
             "batch_size": 32,
             "image_size": 224,
-            "img_dir": "Dataset/images/",
+            "img_dir": "Dataset/test/",
             "json_path": "Dataset/splits_info.json",
             "k_values": [1, 5, 10]
         },
-        "model": {
-            "vision_encoder": {
-                "type": "endovit",
-                "feature_dim": 768,
-                "model_name": "egeozsoy/EndoViT",
-                "ckp_path": "Pretrained/backbones/ent_vit/best_model.pth"
-            },
-            "text_encoder": {
-                "type": "clip",
-                "feature_dim": 768,
-                "model_name": "openai/clip-vit-base-patch32",
-            },
-            "ckp_path": "Pretrained/checkpoints/endovit_clip/best.pt",
-            "temperature": 0.07
-        }
+        # "model": {
+        #     "vision_encoder": {
+        #         "type": "endovit",
+        #         "feature_dim": 768,
+        #         "model_name": "egeozsoy/EndoViT",
+        #     },
+        #     "text_encoder": {
+        #         "type": "clip",
+        #         "feature_dim": 768,
+        #         "model_name": "openai/clip-vit-base-patch32",
+        #     },
+        #     "ckp_path": "Pretrained/checkpoints/endovit_clip/best.pt",
+        #     "temperature": 0.07
+        # }
     }
     
     # Create searcher
-    searcher = Searcher(config=config)
+    searcher = MedCLIPSearcher(config=config)
     
     # Build index
     searcher.build_index("test_index")
